@@ -10,6 +10,12 @@ router.get('/', (req, res) => {
 // NEW
 
 // SHOW ONE
+router.get('/:id', (req, res) => {
+    User.findById(req.params.userId)
+    .then((user) => {
+        res.send('showing this item')
+    })
+})
 
 // EDIT
 
