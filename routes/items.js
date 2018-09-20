@@ -4,7 +4,7 @@ const { User } = require('../db/schema')
 
 // INDEX - SHOW ALL
 router.get('/', (req, res) => {
-    res.send('time for items!')
+    res.redirect(`/users/${req.params.userId}/collections/${req.params.collectionId}`)
 })
 
 // NEW
