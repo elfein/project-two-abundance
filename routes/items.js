@@ -28,6 +28,9 @@ router.get('/:id', (req, res) => {
 })
 
 // EDIT
+router.get('/:id/edit', (req, res) => {
+    res.send('edit time!!')
+})
 
 // CREATE
 router.post('/', (req, res) => {
