@@ -6,7 +6,7 @@ const Schema = require('./schema')
 
 const { User, Collection, Item } = Schema
 
-const howlBox = new Item({ name: 'Howl\'s Moving Castle', refAddress: '#', origin: 'Kyoto, Japan', getYear: 2018, note: 'A very wistful tune', isGift: false })
+const howlBox = new Item({ name: 'Howl\'s Moving Castle', refAddress: 'https://gloimg.gbtcdn.com/gb/pdm-product-pic/Electronic/2017/08/22/goods-img/1503362942487970798.jpg', origin: 'Kyoto, Japan', getYear: 2018, note: 'A very wistful tune', isGift: false })
 const memoryBox = new Item({ name: 'Memory', refAddress: '#', origin: 'Synagoge Summer Yard Sale', getYear: 2008, note: 'My first music box (I think)', isGift: false })
 
 const musicBoxes = new Collection({ name: 'Music Boxes', items: [howlBox, memoryBox] })
