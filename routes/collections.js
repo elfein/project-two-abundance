@@ -38,7 +38,7 @@ router.post('/', (req, res) => {
      user.collections.push(newCollection)
      return user.save()
  })
- .then((user) => {
+ .then(() => {
      res.redirect(`/users/${req.params.userId}/collections`)
  })
 })
