@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
-const { User } = require('../db/schema')
+const { User, Item } = require('../db/schema')
 
 // INDEX - SHOW ALL
 router.get('/', (req, res) => {
@@ -9,16 +9,17 @@ router.get('/', (req, res) => {
 
 // NEW
 router.get('/new', (req,res) => {
-    res.render('items/new')
+    res.render('items/new', {
+        userId: req.params.userId,
+        collectionId: req.params.collectionId
+    })
 })
 
 // SHOW ONE
 router.get('/:id', (req, res) => {
     User.findById(req.params.userId)
     .then((user) => {
-        console.log(user)
         res.render('items/show', { 
-            // collection: req.params.collectionId,
             item: user.collections.id(req.params.collectionId).items.id(req.params.id)
          })
     })
@@ -27,6 +28,17 @@ router.get('/:id', (req, res) => {
 // EDIT
 
 // CREATE
+router.post('/', (req, res) => {
+    const newItem = new Item(req.body)
+    User.findById(req.params.userId)
+    .then((user) => {
+        user.collections.id(req.params.collectionId).items.push(newItem)
+        return user.save()
+    })
+    .then(() => {
+        res.redirect(`/users/${req.params.userId}/collections/${req.params.collectionId}`)
+    })
+})
 
 // UPDATE
 
