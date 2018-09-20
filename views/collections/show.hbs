@@ -7,7 +7,3 @@
 <div><a href='/users/{{../userId}}/collections/{{../collection._id}}/items/{{this._id}}'>{{this.name}}</a></div>
 {{/each}}
 <a href='/users/{{userId}}/collections/{{collection._id}}/items/new'>Add Item</a>
-
-<form action="/users/{{userId}}/collections/{{collection._id}}?_method=DELETE" method="POST">
-<div><input type='submit' value='Delete Collection?'></div>
-</form>
