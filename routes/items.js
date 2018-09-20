@@ -8,6 +8,9 @@ router.get('/', (req, res) => {
 })
 
 // NEW
+router.get('/new', (req,res) => {
+    res.render('items/new')
+})
 
 // SHOW ONE
 router.get('/:id', (req, res) => {
