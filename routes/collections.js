@@ -13,6 +13,15 @@ router.get('/', (req, res) => {
 // NEW
 
 // SHOW ONE
+router.get('/:id', (req, res) => {
+    User.findById(req.params.userId)
+    .then((user) => {
+        res.render('collections/show', {
+            userId: req.params.userId,
+            collection: user.collections.id(req.params.id)
+        })
+    })
+})
 
 // EDIT
 
