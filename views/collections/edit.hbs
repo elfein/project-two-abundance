@@ -1,0 +1,10 @@
+<h1>Edit This Collection</h1>
+
+<form action="/users/{{user._id}}/collections/{{collection._id}}?_method=PUT" method="POST">
+    <div>Name: <input type='text' name='name' value="{{collection.name}}"></div>
+    <div><input type='submit' value='Update Collection'</div>
+</form>
+
+<form action="/users/{{user._id}}/collections/{{collection._id}}?_method=DELETE" method="POST">
+<div><input type='submit' value='Delete Collection?'></div>
+</form>
