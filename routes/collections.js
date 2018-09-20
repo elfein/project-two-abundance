@@ -29,6 +29,9 @@ router.get('/:id', (req, res) => {
 })
 
 // EDIT
+router.get('/:id/edit', (req, res) => {
+    res.send('user edit page')
+})
 
 // CREATE
 router.post('/', (req, res) => {
