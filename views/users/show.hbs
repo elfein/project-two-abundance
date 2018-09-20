@@ -3,7 +3,7 @@
 
 <div>
     {{#each user.collections}}
-    <li>{{this.name}}</li>
+    <li><a href="/users/{{../user._id}}/collections/{{this._id}}">{{this.name}}</a></li>
     {{/each}}
 </div>
 
