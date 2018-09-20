@@ -5,4 +5,6 @@
     <div><input type='submit' value='Update Collector'></div>
 </form>
 
-    <p><a href="/users/{{user._id}}/delete">Delete Collector?</a></p>
+<form action="/users/{{user._id}}?_method=DELETE" method="POST">
+<div><input type='submit' value='Delete Collector?'></div>
+</form>
