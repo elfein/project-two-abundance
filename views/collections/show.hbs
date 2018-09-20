@@ -3,3 +3,7 @@
 {{#each collection.items}}
 <div>{{this.name}}</div>
 {{/each}}
+
+<form action="/users/{{userId}}/collections/{{collection._id}}?_method=DELETE" method="POST">
+<div><input type='submit' value='Delete Collection?'></div>
+</form>

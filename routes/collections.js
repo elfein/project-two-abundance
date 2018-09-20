@@ -46,5 +46,25 @@ router.post('/', (req, res) => {
 // UPDATE
 
 // DELETE
+router.delete('/:id', (req, res) => {
+    // User.findById(req.params.userId)
+    // .then((user) => {
+    //     return user.collections.pull( { _id: req.params.id } )
+    // })
+    // .then(() => {
+    //     res.redirect(`/users/${userId}`)
+    // })
+
+    User.findById(req.params.userId)
+    .then((user) => {
+        user.collections.remove(req.params.id)
+        return user.save()
+    })
+    .then((user) => {
+        res.redirect(`/users/${req.params.userId}`)
+    })
+})
+
+User.findByIdAndRemove
 
 module.exports = router
