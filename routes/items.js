@@ -13,7 +13,11 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
     User.findById(req.params.userId)
     .then((user) => {
-        res.send('showing this item')
+        console.log(user)
+        res.render('items/show', { 
+            // collection: req.params.collectionId,
+            item: user.collections.id(req.params.collectionId).items.id(req.params.id)
+         })
     })
 })
 
