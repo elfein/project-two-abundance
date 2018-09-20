@@ -2,17 +2,23 @@ var express = require('express');
 var router = express.Router();
 const { User } = require('../db/schema')
 
-// SHOW ALL
+// INDEX - SHOW ALL
 router.get('/', function(req, res) {
   User.find()
   .then((users) => {
-    res.send(users)
+    res.render('users/index', { users })
   })
 });
 
 // NEW
 
 // SHOW ONE
+router.get('/:id', (req, res) => {
+  User.findById(req.params.id)
+  .then((user) => {
+    res.render('users/show', { user })
+  })
+})
 
 // CREATE
 
