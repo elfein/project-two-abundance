@@ -24,6 +24,12 @@ router.get('/:id', (req, res) => {
 })
 
 // CREATE
+router.post('/', (req, res) => {
+  User.create(req.body)
+    .then((user) => {
+      res.redirect(`/users/${user._id}`)
+    })
+})
 
 // EDIT
 router.get('/:id/edit', (req, res) => {
@@ -34,12 +40,12 @@ router.get('/:id/edit', (req, res) => {
 })
 
 // UPDATE
-// router.put('/:id', (req, res) => {
-//   User.findByIdAndUpdate(req.params.id, req.boy)
-//   .then((user) => {
-//     res.redirect(`/users/${user._id}`)
-//   })
-// })
+router.put('/:id', (req, res) => {
+  User.findByIdAndUpdate(req.params.id, req.body)
+  .then((user) => {
+    res.redirect(`/users/${user._id}`)
+  })
+})
 
 // DELETE
 
