@@ -7,3 +7,7 @@
     <h4>Note: {{item.note}}</h4>
     <h4>Gift: {{item.isGift}}</h4>
 </div>
+
+<form action="/users/{{userId}}/collections/{{collectionId}}/items/{{item._id}}?_method=DELETE" method="POST">
+<div><input type='submit' value='Delete Item?'></div>
+</form>
