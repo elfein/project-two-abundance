@@ -52,7 +52,7 @@ router.delete('/:id', (req, res) => {
         user.collections.remove(req.params.id)
         return user.save()
     })
-    .then((user) => {
+    .then(() => {
         res.redirect(`/users/${req.params.userId}`)
     })
 })
