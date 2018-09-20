@@ -20,6 +20,8 @@ router.get('/:id', (req, res) => {
     User.findById(req.params.userId)
     .then((user) => {
         res.render('items/show', { 
+            userId: req.params.userId,
+            collectionId: req.params.collectionId,
             item: user.collections.id(req.params.collectionId).items.id(req.params.id)
          })
     })
@@ -43,5 +45,15 @@ router.post('/', (req, res) => {
 // UPDATE
 
 // DELETE
+router.delete('/:id', (req, res) => {
+    User.findById(req.params.userId)
+    .then((user) => {
+        user.collections.id(req.params.collectionId).items.remove(req.params.id)
+        return user.save()
+    })
+    .then(() => {
+        res.redirect(`/users/${req.params.userId}/collections/${req.params.collectionId}`)
+    })
+})
 
 module.exports = router
