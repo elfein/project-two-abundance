@@ -1,0 +1,11 @@
+<h1>New Item</h1>
+
+<form action='/users/{{userId}}/collections/{{collectionId}}/items' method="POST">
+    <div>Name: <input type='text' name='name'></div>
+    <div>Reference: <input type='text' name='refAddress' value='Put in a link!'></div>
+    <div>From: <input type='text' name='origin'></div>
+    <div>Collected in: <input type='number' name='getYear'></div>
+    <div>Notes: <input type='text' name='note'></div>
+    <div>Was it a gift? <input type='radio' name='isGift' value='true'> Yes <input type='radio' name='isGift' value='true' checked> No</div>
+    <div><input type='submit' value="Create New Item"></div>
+</form>
