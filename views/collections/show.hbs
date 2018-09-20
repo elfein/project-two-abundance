@@ -1,7 +1,7 @@
 <h1>{{collection.name}}</h1>
 
 {{#each collection.items}}
-<div>{{this.name}}</div>
+<div><a href='/users/{{../userId}}/collections/{{../collection._id}}/items/{{this._id}}'>{{this.name}}</a></div>
 {{/each}}
 <a href='/users/{{userId}}/collections/{{collection._id}}/items/new'>Add Item</a>
 
