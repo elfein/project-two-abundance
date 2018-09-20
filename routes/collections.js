@@ -30,7 +30,13 @@ router.get('/:id', (req, res) => {
 
 // EDIT
 router.get('/:id/edit', (req, res) => {
-    res.send('user edit page')
+    User.findById(req.params.userId)
+    .then((user) => {
+        res.render('collections/edit', { 
+            user,
+            collection: user.collections.id(req.params.id)
+        })
+    })
 })
 
 // CREATE
@@ -47,6 +53,16 @@ router.post('/', (req, res) => {
 })
 
 // UPDATE
+router.put('/:id', (req, res) => {
+    User.findById(req.params.userId)
+    .then((user) => {
+        user.collections.id(req.params.id).set(req.body)
+        return user.save()
+    })
+    .then(() => {
+        res.redirect(`/users/${req.params.userId}/`)
+    })
+})
 
 // DELETE
 router.delete('/:id', (req, res) => {
@@ -56,7 +72,7 @@ router.delete('/:id', (req, res) => {
         return user.save()
     })
     .then(() => {
-        res.redirect(`/users/${req.params.userId}`)
+        res.redirect(`/users/${req.params.userId}/collections/${req.params.id}`)
     })
 })
 
