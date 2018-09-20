@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const ItemSchema = new Schema({
     name: String,
+    refAddress: String,
     origin: String,
     getYear: Number,
     note: String,

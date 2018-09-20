@@ -6,8 +6,8 @@ const Schema = require('./schema')
 
 const { User, Collection, Item } = Schema
 
-const howlBox = new Item({ name: 'Howl\'s Moving Castle', origin: 'Kyoto, Japan', getYear: 2018, note: 'A very wistful tune', isGift: false })
-const memoryBox = new Item({ name: 'Memory', origin: 'Synagoge Summer Yard Sale', getYear: 2008, note: 'My first music box (I think)', isGift: false })
+const howlBox = new Item({ name: 'Howl\'s Moving Castle', refAddress: '#', origin: 'Kyoto, Japan', getYear: 2018, note: 'A very wistful tune', isGift: false })
+const memoryBox = new Item({ name: 'Memory', refAddress: '#', origin: 'Synagoge Summer Yard Sale', getYear: 2008, note: 'My first music box (I think)', isGift: false })
 
 const musicBoxes = new Collection({ name: 'Music Boxes', items: [howlBox, memoryBox] })
 
