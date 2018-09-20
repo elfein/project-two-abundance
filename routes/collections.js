@@ -11,21 +11,37 @@ router.get('/', (req, res) => {
 })
 
 // NEW
+router.get('/new', (req, res) => {
+    res.render('collections/new', {
+        userId: req.params.userId
+    })
+})
 
 // SHOW ONE
 router.get('/:id', (req, res) => {
     User.findById(req.params.userId)
-    .then((user) => {
-        res.render('collections/show', {
-            userId: req.params.userId,
-            collection: user.collections.id(req.params.id)
+        .then((user) => {
+            res.render('collections/show', {
+                userId: req.params.userId,
+                collection: user.collections.id(req.params.id)
+            })
         })
-    })
 })
 
 // EDIT
 
 // CREATE
+router.post('/', (req, res) => {
+ const newCollection = new Collection(req.body)
+ User.findById(req.params.userId)
+ .then((user) => {
+     user.collections.push(newCollection)
+     return user.save()
+ })
+ .then((user) => {
+     res.redirect(`/users/${req.params.userId}/collections`)
+ })
+})
 
 // UPDATE
 
