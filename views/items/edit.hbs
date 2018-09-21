@@ -9,3 +9,7 @@
     <div>Was it a gift? <input type='radio' name='isGift' value='true'> Yes <input type='radio' name='isGift' value='true' checked> No</div>
     <div><input type='submit' value="Update Item"></div>
 </form>
+
+<form action="/users/{{userId}}/collections/{{collectionId}}/items/{{item._id}}?_method=DELETE" method="POST">
+<div><input type='submit' value='Delete Item?'></div>
+</form>
