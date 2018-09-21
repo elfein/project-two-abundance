@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
      return user.save()
  })
  .then(() => {
-     res.redirect(`/users/${req.params.userId}/collections`)
+     res.redirect(`/users/${req.params.userId}/collections/${newCollection._id}`)
  })
 })
 
