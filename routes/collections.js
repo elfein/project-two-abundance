@@ -60,7 +60,7 @@ router.put('/:id', (req, res) => {
         return user.save()
     })
     .then(() => {
-        res.redirect(`/users/${req.params.userId}/`)
+        res.redirect(`/users/${req.params.userId}/collections/${req.params.id}`)
     })
 })
 
