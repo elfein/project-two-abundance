@@ -1,0 +1,11 @@
+<h1>Edit Item</h1>
+
+<form action='/users/{{userId}}/collections/{{collectionId}}/items/{{item._id}}?_method=PUT' method="POST">
+    <div>Name: <input type='text' name='name' value='{{item.name}}'></div>
+    <div>Reference: <input type='text' name='refAddress' value='{{item.refAddress}}'></div>
+    <div>From: <input type='text' name='origin' value='{{item.origin}}'></div>
+    <div>Collected in: <input type='number' name='getYear' value={{item.getYear}}></div>
+    <div>Notes: <input type='text' name='note' value='{{item.note}}'></div>
+    <div>Was it a gift? <input type='radio' name='isGift' value='true'> Yes <input type='radio' name='isGift' value='true' checked> No</div>
+    <div><input type='submit' value="Update Item"></div>
+</form>

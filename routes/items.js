@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 })
 
 // NEW
-router.get('/new', (req,res) => {
+router.get('/new', (req, res) => {
     res.render('items/new', {
         userId: req.params.userId,
         collectionId: req.params.collectionId
@@ -18,45 +18,62 @@ router.get('/new', (req,res) => {
 // SHOW ONE
 router.get('/:id', (req, res) => {
     User.findById(req.params.userId)
-    .then((user) => {
-        res.render('items/show', { 
-            userId: req.params.userId,
-            collectionId: req.params.collectionId,
-            item: user.collections.id(req.params.collectionId).items.id(req.params.id)
-         })
-    })
+        .then((user) => {
+            res.render('items/show', {
+                userId: req.params.userId,
+                collectionId: req.params.collectionId,
+                item: user.collections.id(req.params.collectionId).items.id(req.params.id)
+            })
+        })
 })
 
 // EDIT
 router.get('/:id/edit', (req, res) => {
-    res.send('edit time!!')
+    User.findById(req.params.userId)
+        .then((user) => {
+            res.render('items/edit', {
+                userId: req.params.userId,
+                collectionId: req.params.collectionId,
+                item: user.collections.id(req.params.collectionId).items.id(req.params.id)
+            })
+        })
 })
 
 // CREATE
 router.post('/', (req, res) => {
     const newItem = new Item(req.body)
     User.findById(req.params.userId)
-    .then((user) => {
-        user.collections.id(req.params.collectionId).items.push(newItem)
-        return user.save()
-    })
-    .then(() => {
-        res.redirect(`/users/${req.params.userId}/collections/${req.params.collectionId}`)
-    })
+        .then((user) => {
+            user.collections.id(req.params.collectionId).items.push(newItem)
+            return user.save()
+        })
+        .then(() => {
+            res.redirect(`/users/${req.params.userId}/collections/${req.params.collectionId}`)
+        })
 })
 
 // UPDATE
+router.put('/:id', (req, res) => {
+    User.findById(req.params.userId)
+    .then((user) => {
+        user.collections.id(req.params.collectionId).items.id(req.params.id).set(req.body)
+        return user.save()
+    })
+    .then(() => {
+        res.redirect(`/users/${req.params.userId}/collections/${req.params.collectionId}/items/${req.params.id}`)
+    })
+})
 
 // DELETE
 router.delete('/:id', (req, res) => {
     User.findById(req.params.userId)
-    .then((user) => {
-        user.collections.id(req.params.collectionId).items.remove(req.params.id)
-        return user.save()
-    })
-    .then(() => {
-        res.redirect(`/users/${req.params.userId}/collections/${req.params.collectionId}`)
-    })
+        .then((user) => {
+            user.collections.id(req.params.collectionId).items.remove(req.params.id)
+            return user.save()
+        })
+        .then(() => {
+            res.redirect(`/users/${req.params.userId}/collections/${req.params.collectionId}`)
+        })
 })
 
 module.exports = router
