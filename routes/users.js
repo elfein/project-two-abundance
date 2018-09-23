@@ -6,6 +6,13 @@ const { User } = require('../db/schema')
 router.get('/', function (req, res) {
   User.find()
     .then((users) => {
+      users.forEach ((user) => {
+        if (user.collections[0]) {
+        user.refAddressOne = user.collections[0].items[0].refAddress
+        }  else {
+          user.refAddressOne = '#'
+        }
+      })
       res.render('users/index', { users })
     })
 });

@@ -1,8 +1,8 @@
 html {
   background-image: url('../images/fall-creek-bg.jpg');
   background-size: cover;
-  color: rgb(255,255,255);
   height: 100%;
+  font-family: "Gill Sans", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -14,18 +14,21 @@ body {
   text-align: center;
 }
 
-header > h1 {
-  font-size: 1.6em;
+header > h1 > a {
+  font-size: 0.8em;
   padding: .5em;
   border: 1px #ffffff solid;
-  background: rgb(11, 20, 5);
+  background: #012218;
   max-width: 50%;
   margin: auto;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 h1 {
   text-transform: uppercase;
-  font: 2em "Gill Sans", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 400;
   letter-spacing: 0.2em;
 }
 
@@ -35,9 +38,10 @@ header {
 }
 
 main {
-  background-color: rgb(11, 20, 5);
+  background-color: rgb(233, 225, 211);
   padding: 30px;
   flex: 1;
+  color: rgb(11, 20, 5);
 }
 
 .container {
@@ -45,19 +49,74 @@ main {
   min-height: 100%;
 }
 
+.collectorBox {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  max-width: 500px;
+  background-size: cover;
+  background-position-y: -50%;
+  background-color: rgba(255,255,255,0.5);
+  color: white;
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  font-size: 1.4em;
+  text-transform: uppercase;
+}
+
+.allCollectors:nth-child(even) > a > div > span {
+  background-color: rgba(160, 145, 32, 0.8);
+}
+
+.allCollectors:nth-child(odd) > a > div > span {
+  background-color: rgba(120, 143, 39, 0.8);
+}
+
+.allCollectors {
+  margin: 10px auto;
+  max-width: 500px;
+}
+
 footer {
   border: 1px #ffffff solid;
-  padding: 30px 0;
+  padding: 15px 0;
+  color: rgb(255,255,255);
+  background-color: rgba(11, 20, 5, 0.5)
 }
 
 footer > p {
-  background: rgb(11, 20, 5);
-  border: 1px #ffffff solid;
-  padding: .5em;
   max-width: 50%;
   margin: auto;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.2em;
 }
 
 a {
   color: #00B7FF;
+}
+
+button {
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 2vw;
+  background: rgb(212, 163, 46);
+  border: none;
+  color: #ffffff;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: 200;
+  margin-bottom: 30px;
 }

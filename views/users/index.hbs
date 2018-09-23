@@ -1,9 +1,17 @@
-<h1>All Collectors</h1>
+<div class="container">
+    <h1>All Collectors</h1>
 
-<div>
-    {{#each users}}
-        <div><a href="/users/{{this._id}}">{{this.name}}</a></div>
-    {{/each}}
+    <div>
+        {{#each users}}
+        <div class="allCollectors">
+            <a href="/users/{{this._id}}">
+                <div class="collectorBox" style="background-image: url({{this.refAddressOne}})">
+                    <span>{{this.name}}</span>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+
+    <a href='/users/new'><button>Add Collector</button></a>
 </div>
-
-<a href='/users/new'><button>Add New Collector</button></a>
