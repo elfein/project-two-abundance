@@ -1,12 +1,12 @@
-<a href="/users"><< All Collectors</a>
+<a href="/users"><< All Collectors</a> <h1>{{user.name}}'s Collections</h1>
+        <a href="/users/{{user._id}}/edit">Edit</a>
 
-<h1>{{user.name}}'s Collections</h1>
-<a href="/users/{{user._id}}/edit">Edit</a>
+        <div>
+            <ul>
+                {{#each user.collections}}
+                <li><a href="/users/{{../user._id}}/collections/{{this._id}}">{{this.name}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
 
-<div>
-    {{#each user.collections}}
-    <li><a href="/users/{{../user._id}}/collections/{{this._id}}">{{this.name}}</a></li>
-    {{/each}}
-</div>
-
-<a href="/users/{{user._id}}/collections/new">Add Collection</a>
+        <a href="/users/{{user._id}}/collections/new">Add Collection</a>
