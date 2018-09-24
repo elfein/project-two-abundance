@@ -54,11 +54,21 @@ main {
   min-height: 100%;
 }
 
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
 .collectorBox, .collectionBox, .itemBox {
   margin: 0 auto;
   position: relative;
   text-align: center;
   height: 100px;
+  width: 100%;
   max-width: 500px;
   background-size: cover;
   background-position-y: -50%;
@@ -91,10 +101,13 @@ span {
 .outer {
   margin: 10px auto;
   max-width: 500px;
+  width: 100%;
+  transform: translateZ(-1000);
 }
 
 .outer:hover {
-  transform: translateX(20px);
+  transform: scale(1.03);
+  transform: translateZ(1000);
 }
 
 a {
@@ -113,7 +126,7 @@ ul {
 }
 
 button {
-  max-width: 500px;
+  max-width: 1020px;
   width: 100%;
   padding: 10px 2vw;
   background: rgb(212, 163, 46);
@@ -122,7 +135,7 @@ button {
   font-size: 1em;
   letter-spacing: 0.1em;
   font-weight: 200;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 
 footer {
@@ -138,4 +151,15 @@ footer > p {
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 0.2em;
+}
+
+@media (max-width: 1061px) {
+  button {
+    max-width: 500px;
+  }
+
+  .list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }

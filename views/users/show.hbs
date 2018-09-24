@@ -2,7 +2,7 @@
     << All Collectors</a> <h1>{{user.name}}'s Collections</h1>
         <a href="/users/{{user._id}}/edit">Edit</a>
 
-        <div>
+        <div class="list">
             {{#each user.collections}}
             <div class="outer">
                 <a href="/users/{{../user._id}}/collections/{{this._id}}">
