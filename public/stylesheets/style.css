@@ -174,12 +174,12 @@ footer > p {
     max-width: 1000px;
   }
 
-  span, h1 {
+  span {
     max-width: 1000px;
-    font-size: 3em;
   }
 
-  a > button {
-    font-size: 2em;
-  }
+html {
+  font-size: 28px;
+}
+
 }
