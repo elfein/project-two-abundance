@@ -15,6 +15,15 @@ const chatBox = new Item({ name: 'Chat Noir Box', refAddress: 'https://78.media.
 const violinBox = new Item({ name: 'Menut Mozart: Menuet Boccherini', refAddress: 'https://78.media.tumblr.com/8edd3df90fb60545688e71b551a87464/tumblr_pfjn63H4n81uj0ljmo7_1280.jpg', origin: 'Italy', getYear: null, note: 'from a yard sale I think', isGift: true })
 const ceramicBox = new Item({ name: '18th Variation on a Theme by Paginini', refAddress: 'https://78.media.tumblr.com/e230d6daf0a848336ceeffbb96314df9/tumblr_pfjn63H4n81uj0ljmo8_1280.png', origin: '?', getYear: null, note: 'says both made in Italy and San Francisco Music Box co.', isGift: true })
 
+const courierAbcStamp = new Item({ name: 'Courier Alphabet Set', refAddress: 'https://78.media.tumblr.com/558d257b24c46d5cd599dbecd8dba008/tumblr_pfkgw1ewZr1uj0ljmo4_1280.jpg', origin: '?', getYear: null, note: '', isGift: false })
+const tokyoStamp = new Item({ name: 'Tokyo Souvenirs', refAddress: 'https://78.media.tumblr.com/8c1b0b611c2e822e60faee21a8149360/tumblr_pfkgw1ewZr1uj0ljmo8_1280.png', origin: 'Tokyo Stationary Store', getYear: 2018, note: 'I need to use these!!', isGift: false})
+const katakanaStamp = new Item({ name: 'Katakana Alphabet Set', refAddress: 'https://78.media.tumblr.com/d27d0db7cd3a56cd152b3972c7f4de11/tumblr_pfkgw1ewZr1uj0ljmo5_1280.jpg', origin: 'Somewhere in Tokyo', getYear: 2018, note: 'That weeb life', isGift: false })
+const miscAbcStamp = new Item({ name: 'Cute Alphabet Sets', refAddress: 'https://78.media.tumblr.com/ddbce1a5a76fe89e2ac756e2c4260687/tumblr_pfkgw1ewZr1uj0ljmo3_1280.jpg', origin: 'maybe Papersource?', getYear: null, note: 'Nice to use on holiday cards', isGift: false })
+const orangeStamp = new Item({ name: 'Orange Crate Design', refAddress: 'https://78.media.tumblr.com/04533a8efba33b26e3dffe28eae721b6/tumblr_pfkgw1ewZr1uj0ljmo7_1280.png', origin: 'Thrift shop in Madison, WI', getYear: 2016, note: 'big!!', isGift: false })
+const yardSaleStamp = new Item({ name: 'Yard Sale Set', refAddress: 'https://78.media.tumblr.com/e595aa8345256173206c1164c4da999f/tumblr_pfkgw1ewZr1uj0ljmo2_1280.jpg', origin: 'yard sale', getYear: 2017, note: 'from my aunt', isGift: true })
+const zeldaStamp = new Item({ name: 'Zelda Post Stamp', refAddress: 'https://78.media.tumblr.com/7082cfc8057af29597550ec942f88404/tumblr_pfkgw1ewZr1uj0ljmo1_1280.jpg', origin: 'Anime Convention', getYear: 2017, note: 'Like in Majora\'s Mask!', isGift: false })
+const floralStamp = new Item({ name: 'Floral Favorites', refAddress: 'https://78.media.tumblr.com/e5731ad7cbd693d502a6f866e6a0c592/tumblr_pfkgw1ewZr1uj0ljmo6_1280.jpg', origin: '?', getYear: null, note: 'always pretty', isGift: false })
+
 const galvanBottle = new Item({ name: 'Galvanina Bottle', refAddress: 'https://78.media.tumblr.com/cd67cbb78e1cd70afe9978aec50006ce/tumblr_pfjk690jEI1uj0ljmo1_1280.jpg', origin: 'some French train station', getYear: 2015, note: 'cute details', isGift: false })
 const sanPelBottle = new Item({ name: 'Aranciata Bottle', refAddress: 'https://78.media.tumblr.com/33209b9ea8e41fdc181c3f4713a7d5fd/tumblr_pfjk690jEI1uj0ljmo2_1280.jpg', origin: 'Italy?', getYear: 2013, note: 'Might be from Cortona', isGift: false })
 const sanFranBottle = new Item({ name: 'Hiking Trail Bottle', refAddress: 'https://78.media.tumblr.com/975af5c28cb7da4eee2fa0f77213c277/tumblr_pfjk690jEI1uj0ljmo3_1280.jpg', origin: 'The side of a trail in San Francisco', getYear: 2015, note: 'Liked the color', isGift: false })
@@ -29,7 +38,7 @@ const kazooHistory = new Item({ name: 'A History of Kazoos', refAddress: 'https:
 const tazGN = new Item({ name: 'TAZ Graphic Novel', refAddress: 'https://read.macmillan.com/wp-content/uploads/2017/07/TAZ_RGB-1.jpg', origin: 'The Boys', getYear: 2018, note: 'Hot stunts cool nights', isGift: false})
 
 const musicBoxes = new Collection({ name: 'Music Boxes', items: [howlBox, memoryBox, georgiaBox, luteBox, chatBox, violinBox, globeBox, ceramicBox] })
-const inkStamps = new Collection({ name: 'Ink Stamps', items: []})//courierAbcStamp, tokyoStamp, katakanaStamp, miscAbcStamp, orangeStamp, yardSaleStamp, zeldaStamp, floralStamp] })
+const inkStamps = new Collection({ name: 'Ink Stamps', items: [courierAbcStamp, tokyoStamp, katakanaStamp, miscAbcStamp, orangeStamp, yardSaleStamp, zeldaStamp, floralStamp] })
 const bottles = new Collection({ name: 'Bottles & Jars', items: [galvanBottle, sanPelBottle, sanFranBottle, shellBottle, yogurtBottle] })
 const sweatshirts = new Collection({ name: 'Park Outerwear', items: []})
 

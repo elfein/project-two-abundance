@@ -83,7 +83,7 @@ span {
   max-width: 500px;
   letter-spacing: 0.2em;
   font-weight: 400;
-  font-size: 1.4em;
+  font-size: 1.8em;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -102,7 +102,7 @@ span {
   margin: 10px auto;
   max-width: 500px;
   width: 100%;
-  transform: translateZ(-1000);
+  transform: translateZ(-1000px);
 }
 
 .outer:hover {
@@ -161,5 +161,25 @@ footer > p {
   .list {
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+}
+
+@media (min-height: 1700px) {
+  .collectorBox, .collectionBox, .itemBox {
+    max-width: 1000px;
+    height: 160px;
+  }
+
+  .outer {
+    max-width: 1000px;
+  }
+
+  span, h1 {
+    max-width: 1000px;
+    font-size: 3em;
+  }
+
+  a > button {
+    font-size: 2em;
   }
 }
