@@ -1,10 +1,15 @@
-<a href="/users/{{userId}}"><< All Collections</a>
-
-<h1>{{collection.name}}</h1>
-<a href="/users/{{userId}}/collections/{{collection._id}}/edit">Edit</a>
-<ul>
-{{#each collection.items}}
-<li><a href='/users/{{../userId}}/collections/{{../collection._id}}/items/{{this._id}}'>{{this.name}}</a></li>
-{{/each}}
-</ul>
-<a href='/users/{{userId}}/collections/{{collection._id}}/items/new'>Add Item</a>
+<a href="/users/{{userId}}">
+    << All Collections</a> <h1>{{collection.name}}</h1>
+        <a href="/users/{{userId}}/collections/{{collection._id}}/edit">Edit</a>
+        <div>
+            {{#each collection.items}}
+            <div class="outer">
+                <a href='/users/{{../userId}}/collections/{{../collection._id}}/items/{{this._id}}'>
+                    <div class="itemBox" style="background-image: url({{this.refAddress}})">
+                        <span><p>{{this.name}}</p></span>
+                    </div>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+        <a href='/users/{{userId}}/collections/{{collection._id}}/items/new'><button>Add Item</button></a>

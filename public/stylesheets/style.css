@@ -54,12 +54,11 @@ main {
   min-height: 100%;
 }
 
-.collectorBox {
+.collectorBox, .collectionBox, .itemBox {
   margin: 0 auto;
   position: relative;
   text-align: center;
   height: 100px;
-  line-height: 100px;
   max-width: 500px;
   background-size: cover;
   background-position-y: -50%;
@@ -67,11 +66,8 @@ main {
   color: white;
 }
 
+
 span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   max-width: 500px;
@@ -79,23 +75,35 @@ span {
   font-weight: 400;
   font-size: 1.4em;
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.allCollectors:nth-child(even) > a > div > span {
+.outer:nth-child(even) > a > div > span {
   background-color: rgba(160, 145, 32, 0.8);
 }
 
-.allCollectors:nth-child(odd) > a > div > span {
+.outer:nth-child(odd) > a > div > span {
   background-color: rgba(120, 143, 39, 0.8);
 }
 
-.allCollectors {
+.outer {
   margin: 10px auto;
   max-width: 500px;
 }
 
+.outer:hover {
+  transform: translateX(20px);
+}
+
 a {
-  color: #00B7FF;
+  color: rgb(11, 20, 5);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(212, 163, 46);
 }
 
 ul {

@@ -26,6 +26,14 @@ router.get('/new', (req, res) => {
 router.get('/:id', (req, res) => {
   User.findById(req.params.id)
     .then((user) => {
+      user.collections.forEach ((collection) => {
+        if (collection.items[0]) {
+          collection.firstRefAddress = collection.items[0].refAddress
+        } else {
+          collection.firstRefAddress = '#'
+        }
+        console.log(user.collections[0].firstRefAddress)
+      })
       res.render('users/show', { user })
     })
 })
