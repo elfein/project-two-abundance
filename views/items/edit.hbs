@@ -6,7 +6,7 @@
     <div>From: <input type='text' name='origin' value='{{item.origin}}'></div>
     <div>Collected in: <input type='number' name='getYear' value={{item.getYear}}></div>
     <div>Notes: <input type='text' name='note' value='{{item.note}}'></div>
-    <div>Was it a gift? <input type='radio' name='isGift' value='true'> Yes <input type='radio' name='isGift' value='false'> No</div>
+    <div>Was it a gift? <input type='radio' name='isGift' value='true'> <label>Yes</label> <input type='radio' name='isGift' value='false'> <label>No</label></div>
     <div><input type='submit' value="Update Item"></div>
     <script>
         const radios = document.getElementsByName('isGift')
@@ -20,5 +20,7 @@
 </form>
 
 <form action="/users/{{userId}}/collections/{{collectionId}}/items/{{item._id}}?_method=DELETE" method="POST">
-<div><input type='submit' value='Delete Item?'></div>
+<div><input id="delete" type='submit' value='Delete Item?'></div>
 </form>
+
+<a href="/users/{{userId}}/collections/{{collectionId}}/items/{{item._id}}">Cancel</a>

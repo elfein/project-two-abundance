@@ -14,10 +14,7 @@ body {
   text-align: center;
 }
 
-img {
-  max-width: 600px;
-  width: 100%;
-}
+/* ---- header/title styling ---- */
 
 header > h1 > a {
   font-size: 0.8em;
@@ -42,11 +39,18 @@ header {
   padding: 30px 0;
 }
 
+/* ---- data/content display ---- */
+
 main {
   background-color: rgb(233, 225, 211);
   padding: 30px;
   flex: 1;
   color: rgb(11, 20, 5);
+}
+
+img {
+  max-width: 600px;
+  width: 100%;
 }
 
 .container {
@@ -105,8 +109,8 @@ span {
   transform: translateZ(-1000px);
 }
 
-.outer:hover {
-  transform: scale(1.03);
+.outer:hover, button:hover, [type~=submit]:hover {
+  transform: scaleX(1.03) scaleY(1.1);
   transform: translateZ(1000);
 }
 
@@ -119,15 +123,29 @@ a:hover {
   color: rgb(212, 163, 46);
 }
 
-ul {
-  margin: 20px;
-  padding: 0;
-  list-style-type: none;
+h4 {
+  font-weight: 300;
+  font-size: 1.4em;
 }
 
-button {
+/* ---- edit form styling ---- */
+
+form > div {
+  font-size: 1.2em;
+}
+
+form > div > input {
+  font-size: 1em;
+  display: block;
+}
+
+form > div > [type~=radio] {
+  display: inline;
+  margin-bottom: 20px;
+}
+
+button, [type~=submit] {
   max-width: 1020px;
-  width: 100%;
   padding: 10px 2vw;
   background: rgb(212, 163, 46);
   border: none;
@@ -135,8 +153,24 @@ button {
   font-size: 1em;
   letter-spacing: 0.1em;
   font-weight: 200;
-  margin: 30px 0;
 }
+
+[type~=submit], [type~=text], [type~=number] {
+  text-align: center;
+  width: 44vw;
+  margin: 6px auto 20px auto;
+}
+
+#delete {
+  background-color: rgba(212, 85, 46, 0.6);
+}
+
+button {
+  margin: 30px 0;
+  width: 100%;
+}
+
+/* ---- footer styling ---- */
 
 footer {
   border: 1px #ffffff solid;
@@ -152,6 +186,8 @@ footer > p {
   font-weight: 300;
   letter-spacing: 0.2em;
 }
+
+/* ---- responsive/view adjustments ---- */
 
 @media (max-width: 1061px) {
   button {
@@ -178,8 +214,8 @@ footer > p {
     max-width: 1000px;
   }
 
-html {
-  font-size: 28px;
-}
+  html {
+    font-size: 28px;
+  }
 
 }

@@ -6,5 +6,7 @@
 </form>
 
 <form action="/users/{{user._id}}/collections/{{collection._id}}?_method=DELETE" method="POST">
-<div><input type='submit' value='Delete Collection?'></div>
+<div><input id="delete" type='submit' value='Delete Collection?'></div>
 </form>
+
+<a href="/users/{{user._id}}/collections/{{collection._id}}">Cancel</a>

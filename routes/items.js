@@ -43,7 +43,7 @@ router.get('/:id/edit', (req, res) => {
 router.post('/', (req, res) => {
     const newItem = new Item(req.body)
     User.findById(req.params.userId)
-        .then((user) => {
+    .then((user) => {
             user.collections.id(req.params.collectionId).items.push(newItem)
             return user.save()
         })
