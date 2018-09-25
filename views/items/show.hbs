@@ -1,18 +1,16 @@
-<a href="/users/{{userId}}/collections/{{collectionId}}"><< All Items</a>
+<a href="/users/{{userId}}/collections/{{collectionId}}">
+    << All Items</a> <h1>{{item.name}}</h1>
+        <a class="edit" href="/users/{{userId}}/collections/{{collectionId}}/items/{{item._id}}/edit">Edit</a>
 
-<h1>{{item.name}}</h1>
-<a class="edit" href="/users/{{userId}}/collections/{{collectionId}}/items/{{item._id}}/edit">Edit</a>
+        <div class="item-page">
+            <div class="pic">
+                <img src="{{item.refAddress}}" alt="Item Reference">
+            </div>
 
-<div class="info">
-    <img src="{{item.refAddress}}" alt="Item Reference">
-    <h4>From: {{item.origin}}</h4>
-    <h4>Collected in: {{item.getYear}}</h4>
-    <h4>Note: {{item.note}}</h4>
-    <h4>Gift: {{item.isGift}}</h4>
-</div>
-
-{{!-- <script>
-    if ({{item.refAddress}}.) {
-        document.querySelector('img').setAttribute('style', 'true')
-    }
-</script> --}}
+            <div class="info">
+                <h4>From: {{item.origin}}</h4>
+                <h4>Collected in: {{item.getYear}}</h4>
+                <h4>Note: {{item.note}}</h4>
+                <h4>Gift: {{item.isGift}}</h4>
+            </div>
+        </div>

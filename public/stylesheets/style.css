@@ -50,7 +50,6 @@ main {
 
 img {
   max-width: 600px;
-  width: 100%;
   margin-top: 16px;
 }
 
@@ -125,9 +124,27 @@ a:hover {
   color: rgb(212, 163, 46);
 }
 
+/* ---- item page styling ---- */
+
 h4 {
   font-weight: 300;
   font-size: 1.4em;
+}
+
+.item-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic > img {
+  max-width: 100%
+}
+
+.pic, .info {
+  margin: 20px;
+  width: 350px;
 }
 
 /* ---- edit form styling ---- */
@@ -241,6 +258,16 @@ footer > p {
   .list {
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .item-page {
+    flex-direction: column;
+  }
+
+  .pic {
+    width: 80vw;
   }
 }
 

@@ -17,7 +17,7 @@ Abundance App was made to help record and organize a user's collections and souv
 - __Complete RESTful routes__ for each resource with GET, POST, PUT, and DELETE
 - __Use of Mongo queries and the Mongoose module__ to interact with a document database
 - Data structuring/site planning through __ERDs__ and __Wireframes__, leading to a cohesive set of user stories on __Trello__
-- Enablers like clean HTML, CSS, JavaScript, and JQuery, as well as Heroku deployment
+- Enablers for user interaction and responsiveness like clean HTML, CSS, JavaScript, and JQuery, as well as Heroku deployment
 
 ## ERDs and Wireframes
 
