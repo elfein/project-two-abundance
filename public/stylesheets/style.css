@@ -289,12 +289,20 @@ footer > p {
     font-size: 28px;
   }
 
-[type~=submit], .edit {
-  font-size: 1.2em;
-}
+  [type~=submit], .edit {
+   font-size: 1.2em;
+  }
 
-#delete {
-  font-size: 1.2em;
-}
+  #delete {
+    font-size: 1.2em;
+  }
+
+  .item-page {
+    flex-direction: column;
+  }
+
+  .pic {
+    width: 80vw;
+  }
 
 }
