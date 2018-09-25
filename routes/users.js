@@ -32,7 +32,6 @@ router.get('/:id', (req, res) => {
         } else {
           collection.firstRefAddress = '#'
         }
-        console.log(user.collections[0].firstRefAddress)
       })
       res.render('users/show', { user })
     })
