@@ -31,51 +31,49 @@ router.get('/:id', (req, res) => {
 // EDIT
 router.get('/:id/edit', (req, res) => {
     User.findById(req.params.userId)
-    .then((user) => {
-        res.render('collections/edit', { 
-            user,
-            collection: user.collections.id(req.params.id)
+        .then((user) => {
+            res.render('collections/edit', {
+                user,
+                collection: user.collections.id(req.params.id)
+            })
         })
-    })
 })
 
 // CREATE
 router.post('/', (req, res) => {
- const newCollection = new Collection(req.body)
- User.findById(req.params.userId)
- .then((user) => {
-     user.collections.push(newCollection)
-     return user.save()
- })
- .then(() => {
-     res.redirect(`/users/${req.params.userId}/collections/${newCollection._id}`)
- })
+    const newCollection = new Collection(req.body)
+    User.findById(req.params.userId)
+        .then((user) => {
+            user.collections.push(newCollection)
+            return user.save()
+        })
+        .then(() => {
+            res.redirect(`/users/${req.params.userId}/collections/${newCollection._id}`)
+        })
 })
 
 // UPDATE
 router.put('/:id', (req, res) => {
     User.findById(req.params.userId)
-    .then((user) => {
-        user.collections.id(req.params.id).set(req.body)
-        return user.save()
-    })
-    .then(() => {
-        res.redirect(`/users/${req.params.userId}/collections/${req.params.id}`)
-    })
+        .then((user) => {
+            user.collections.id(req.params.id).set(req.body)
+            return user.save()
+        })
+        .then(() => {
+            res.redirect(`/users/${req.params.userId}/collections/${req.params.id}`)
+        })
 })
 
 // DELETE
 router.delete('/:id', (req, res) => {
     User.findById(req.params.userId)
-    .then((user) => {
-        user.collections.remove(req.params.id)
-        return user.save()
-    })
-    .then(() => {
-        res.redirect(`/users/${req.params.userId}/`)
-    })
+        .then((user) => {
+            user.collections.remove(req.params.id)
+            return user.save()
+        })
+        .then(() => {
+            res.redirect(`/users/${req.params.userId}/`)
+        })
 })
-
-User.findByIdAndRemove
 
 module.exports = router
