@@ -1,6 +1,6 @@
 <a href="/users/{{userId}}">
     << All Collections</a> <h1>{{collection.name}}</h1>
-        <a href="/users/{{userId}}/collections/{{collection._id}}/edit">Edit</a>
+        <a class="edit" href="/users/{{userId}}/collections/{{collection._id}}/edit">Edit</a>
         <div class="list">
             {{#each collection.items}}
             <div class="outer">

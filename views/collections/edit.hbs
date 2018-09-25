@@ -2,11 +2,21 @@
 
 <form action="/users/{{user._id}}/collections/{{collection._id}}?_method=PUT" method="POST">
     <div>Name: <input type='text' name='name' value="{{collection.name}}"></div>
-    <div><input type='submit' value='Update Collection'</div>
+    <div><input type='submit' value='Update Collection'></div>
 </form>
 
-<form action="/users/{{user._id}}/collections/{{collection._id}}?_method=DELETE" method="POST">
-<div><input id="delete" type='submit' value='Delete Collection?'></div>
-</form>
+<button class="edit" id="delete">Delete</button>
 
 <a href="/users/{{user._id}}/collections/{{collection._id}}">Cancel</a>
+
+<!-- delete modal -->
+<div class="modal closed" id="delete-modal">
+    <h4>Are you sure you want to delete this collection?</h4>
+
+    <form action="/users/{{user._id}}/collections/{{collection._id}}?_method=DELETE" method="POST">
+        <div><input id="delete" type='submit' value='Delete Collection'></div>
+    </form>
+</div>
+
+<div class="modal-overlay closed" id="delete-modal-overlay">
+</div>
