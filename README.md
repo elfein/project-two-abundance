@@ -6,7 +6,7 @@ Abundance App was made to help record and organize a user's collections and souv
 
 ## Project Links
 
-- [Heroku](https://rocky-lowlands-30178.herokuapp.com/users/5baa3ee39663ec0015829e2e/collections/5baa3ee79663ec0015829e2f)
+- [Heroku](https://rocky-lowlands-30178.herokuapp.com/users)
 
 - [Trello Board](https://trello.com/b/EcCBlL1M/collector-help-app)
 
@@ -31,6 +31,8 @@ Abundance App was made to help record and organize a user's collections and souv
 ### Wireframe with MVP and End Goal User flow:
 
 ![Wireframe Whole](https://66.media.tumblr.com/125e645cbba4b18e268dbc6d66a6a8af/tumblr_pfm7x2rMSG1uj0ljmo8_r1_1280.jpg)
+
+![mypic](./IMG_sjgkdf.jeg)
 
 ### Holistic wireframe used for constructing Trello user stories:
 
