@@ -6,7 +6,7 @@ Abundance App was made to help record and organize a user's collections and souv
 
 ## Project Links
 
-- [Heroku](https://rocky-lowlands-30178.herokuapp.com/users)
+- [Heroku](https://rocky-lowlands-30178.herokuapp.com/)
 
 - [Trello Board](https://trello.com/b/EcCBlL1M/collector-help-app)
 
@@ -41,7 +41,7 @@ Abundance App was made to help record and organize a user's collections and souv
 ## Developer Notes
 
 - This project reinforced the importance of organized user stories, which were vital for keeping me sane while constructing CRUD functionality.
-- It was satisfying to add in slightly more interactive features compared to project one, like hover transformations, user/collection preview images, and confirmation overlays. 
+- It was satisfying to add in slightly more interactive features compared to project one, like hover transitions, user/collection preview images, and confirmation overlays. 
 - I did feel less structured in my attempt at styling, with user stories becoming less defined at that point. This might be fixed by having a more specific visual design in mind at the start, although the flexibility was also beneficial. 
 - The question of setting up a user and their collections all from one page seems like a difficult and interesting challenge to tackle given way more time.
-- It also would have been awesome to include optional video/link properties for items, so things 
+- It also would have been awesome to include optional video/link properties for items.
