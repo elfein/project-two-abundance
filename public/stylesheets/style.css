@@ -247,6 +247,10 @@ footer > p {
   letter-spacing: 0.2em;
 }
 
+p > a {
+  color: rgba(120, 143, 39, 0.8);
+}
+
 /* ---- responsive/view adjustments ---- */
 
 @media (max-width: 1061px) {
